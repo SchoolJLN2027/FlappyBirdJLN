@@ -35,6 +35,8 @@ public class Bird : MonoBehaviour
 
     private void OnCollisionEnter2D()
     {
-        isDead = true;   
+        isDead = true;
+
+        GameControl.Instance.ShipCrash();
     }
 }
