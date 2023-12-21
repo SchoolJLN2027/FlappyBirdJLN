@@ -1385,7 +1385,7 @@ Transform:
   m_GameObject: {fileID: 1290722820}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -11.2, y: 10.8, z: 0}
+  m_LocalPosition: {x: -23, y: 10.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1403,7 +1403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fc25137379fe31489b033cda6464390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upForce: 1000
+  upForce: 500
 --- !u!95 &1290722826
 Animator:
   serializedVersion: 5
@@ -1456,7 +1456,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOverText: {fileID: 347876423}
   gameOver: 0
-  ScrollSpeed: -2
+  ScrollSpeed: -5
+  scoreText: {fileID: 153432259}
 --- !u!4 &1782341557
 Transform:
   m_ObjectHideFlags: 0
