@@ -12,9 +12,12 @@ public class Barriers : MonoBehaviour
     public float BarsMax = 3.5f;
 
     GameObject[] bars;
-    Vector2 objectPoolPosition = new Vector2(-15f, -25f);
+    Vector2 objectPoolPosition = new Vector2(15f, -25f);
     float timeSinceLastSpawned;
     float SpawnXPosition = 10f;
+    int currentBar = 0; 
+
+    
     public void OnTriggerEnter2D(Collider2D other)
     {
         if (other.GetComponent<Bird>() != null)
@@ -30,7 +33,7 @@ public class Barriers : MonoBehaviour
         {
             bars[i] = (GameObject)Instantiate (Barrier, objectPoolPosition, Quaternion.identity);
         }
-    }
+            }
 
     private void Update()
     {
@@ -39,7 +42,13 @@ public class Barriers : MonoBehaviour
         {
             timeSinceLastSpawned = 0;
             float spawnYPosition = Random.Range(BarsMin, BarsMax);
-            bars[cuurrentbar]
+            bars[currentBar].transform.position = new Vector2 (SpawnXPosition, spawnYPosition);
+            currentBar++;
+            if (currentBar >= barrierAmount)
+            {
+                currentBar = 0;
+            }
+            
         }
     }
 }
